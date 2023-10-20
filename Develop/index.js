@@ -56,31 +56,81 @@ inquirer
             name: 'Tests'
         },
     ])
-    .then((respone)=>{
+    .then((response)=>{
 
-        fs.writeFile('index.html', `
-        `)
-    })
+        const markdown = generateMarkdown(response);
+        const html = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=>, initial-scale=1.0">
+            <title>Document</title>
+        </head>
+        <body>
+            <h1>README</h1>
+            <form>
+                <label for="description">Description</label><br>
+                <p type="'text" id="description" name="description"></p><br>
+                <label for="tableofcontents">Table of Contents</label><br>
+                <p type="'text" id="tableofcontents" name="tableofcontents"></p><br>
+                <label for="installation">Installation</label><br>
+                <p type="'text" id="installation" name="installation"></p><br>
+                <label for="usage">Usage</label><br>
+                <p type="'text" id="usage" name="usage"></p><br>
+                <label for="credits">Credits</label><br>
+                <p type="'text" id="credits" name="credits"></p><br>
+                <label for="license">License</label><br>
+                <p type="'text" id="license" name="license"></p><br>
+                <label for="badges">Badges</label><br>
+                <p type="'text" id="badges" name="badges"></p><br>
+                <label for="features">Features</label><br>
+                <p type="'text" id="features" name="features"></p><br>
+                <label for="howtocontribute">How to Contribute</label><br>
+                <p type="'text" id="howtocontribute" name="howtocontribute"></p><br>
+                <label for="tests">Tests</label><br>
+                <p type="'text" id="tests" name="tests"></p><br>
+                
+            </form>
+        </body>
+        </html> `;
 
-// TODO: Create an array of questions for user input
-const questions = [];
-//* add type, name, and message for each question
-//* add questions: add readme sections per acceptance criteria (desctiption, usage, license, etc)
+        fs.writeFile('README.html', html, (err) => {
+            if (err) {
+                console.error(err);
+            } else {
+                console.log('HTML file created successfully!');
+            }    
+        });
+
+        fs.writeFile('README.me', markdown, (err) => {
+            if (err) {
+                console.error(err);
+            } else {
+                console.log('Markdown file created successfully!');
+            }
+        } );    
+    });
+    
+
+// // TODO: Create an array of questions for user input
+// const questions = [];
+// //* add type, name, and message for each question
+// //* add questions: add readme sections per acceptance criteria (desctiption, usage, license, etc)
 
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) { }
-// use FS module to write data to readme file, fileName
+// // TODO: Create a function to write README file
+// function writeToFile(fileName, data) { }
+// // use FS module to write data to readme file, fileName
 
-// TODO: Create a function to initialize app
-function init() { }
+// // TODO: Create a function to initialize app
+// function init() { }
 
-// Function call to initialize app
-init();
+// // Function call to initialize app
+// init();
 
 
 //Pseudocode
 //use inquirer to display questions to user
 //call function generateMarkdown
 //take what is returned and pass to writeToFile function
-
