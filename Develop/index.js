@@ -2,6 +2,7 @@
 const inquirer = require('inquirer');
 const fs = require("fs");
 const generateMarkdown = require('./utils/generateMarkdown');
+const { cpuUsage } = require('process');
 
 function init() {
     inquirer
@@ -57,64 +58,96 @@ function init() {
                 name: 'Tests'
             },
         ])
-        .then((response) => {
+        .then((response)=> {
+const markdown = `
+# Description 
+${response.Description}
 
-            const markdown = generateMarkdown(response);
-            const html = `
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=>, initial-scale=1.0">
-            <title>Document</title>
-        </head>
-        <body>
-            <h1>README</h1>
-            <form>
-                <label for="description">Description</label><br>
-                <p type="'text" id="description" name="description"></p><br>
-                <label for="tableofcontents">Table of Contents</label><br>
-                <p type="'text" id="tableofcontents" name="tableofcontents"></p><br>
-                <label for="installation">Installation</label><br>
-                <p type="'text" id="installation" name="installation"></p><br>
-                <label for="usage">Usage</label><br>
-                <p type="'text" id="usage" name="usage"></p><br>
-                <label for="credits">Credits</label><br>
-                <p type="'text" id="credits" name="credits"></p><br>
-                <label for="license">License</label><br>
-                <p type="'text" id="license" name="license"></p><br>
-                <label for="badges">Badges</label><br>
-                <p type="'text" id="badges" name="badges"></p><br>
-                <label for="features">Features</label><br>
-                <p type="'text" id="features" name="features"></p><br>
-                <label for="howtocontribute">How to Contribute</label><br>
-                <p type="'text" id="howtocontribute" name="howtocontribute"></p><br>
-                <label for="tests">Tests</label><br>
-                <p type="'text" id="tests" name="tests"></p><br>
-                
-            </form>
-        </body>
-        </html> `;
+## Table of Countents 
+${response['Table of Contents (Optional)']}
 
-            fs.writeFile('README.html', html, (err) => {
-                if (err) {
-                    console.error(err);
-                } else {
-                    console.log('HTML file created successfully!');
-                }
-            });
+## Installation
+${response.Installation}
 
-            fs.writeFile('README.md', markdown, (err) => {
-                if (err) {
-                    console.error(err);
-                } else {
-                    console.log('Markdown file created successfully!');
-                }
-            });
+## Usage
+${response.Usage}
+
+## Credits
+${response.Credits}
+
+## License
+${response.License}
+
+## Badges
+${response.Badges}
+
+## Features
+${response.Features}
+
+## How to Contribute
+${response['How to Contribute']}
+
+## Test
+${response.Tests}
+`;
+
+        fs.writeFile('newREADME.md', markdown, (err) => {
+            if (err) {
+                console.error(err);
+            } else {
+                console.log('Markdown file created successfully!');
+            }
         });
+    });
 }
 init();
 
+        //     const markdown = generateMarkdown(response);
+        //     const html = `
+        // <!DOCTYPE html>
+        // <html lang="en">
+        // <head>
+        //     <meta charset="UTF-8">
+        //     <meta name="viewport" content="width=>, initial-scale=1.0">
+        //     <title>Document</title>
+        // </head>
+        // <body>
+        //     <h1>README</h1>
+        //     <form>
+        //         <label for="description">Description</label><br>
+        //         <p type="'text" id="description" name="description"></p><br>
+        //         <label for="tableofcontents">Table of Contents</label><br>
+        //         <p type="'text" id="tableofcontents" name="tableofcontents"></p><br>
+        //         <label for="installation">Installation</label><br>
+        //         <p type="'text" id="installation" name="installation"></p><br>
+        //         <label for="usage">Usage</label><br>
+        //         <p type="'text" id="usage" name="usage"></p><br>
+        //         <label for="credits">Credits</label><br>
+        //         <p type="'text" id="credits" name="credits"></p><br>
+        //         <label for="license">License</label><br>
+        //         <p type="'text" id="license" name="license"></p><br>
+        //         <label for="badges">Badges</label><br>
+        //         <p type="'text" id="badges" name="badges"></p><br>
+        //         <label for="features">Features</label><br>
+        //         <p type="'text" id="features" name="features"></p><br>
+        //         <label for="howtocontribute">How to Contribute</label><br>
+        //         <p type="'text" id="howtocontribute" name="howtocontribute"></p><br>
+        //         <label for="tests">Tests</label><br>
+        //         <p type="'text" id="tests" name="tests"></p><br>
+                
+        //     </form>
+        // </body>
+        // </html> `;
+
+            // fs.writeFile('README.html', html, (err) => {
+            //     if (err) {
+            //         console.error(err);
+            //     } else {
+            //         console.log('HTML file created successfully!');
+            //     }
+            // });
+
+        
 
 // // TODO: Create an array of questions for user input
 // const questions = [];
