@@ -22,17 +22,17 @@ inquirer
         },
         {
             type: 'input',
-            message: 'Provide instructions and examples for use. Include screenshots as needed. To add a screenshot, create an assets/images folder in your repository and upload your screenshot to it',
+            message: 'Provide instructions and examples for use. Include screenshots as needed. To add a screenshot, create an assets/images folder in your repository and upload your screenshot to it.',
             name: 'Usage'
         },
         {
             type: 'input',
-            message: '',
+            message: 'List your collaborators, if any, with links to their GitHub profiles. If you used any third-party assests that require attribution, list the creators with links to their primary web presence in this section. If you followed tutorials, include links to those here as well.',
             name: 'Credits'
         },
         {
             type: 'input',
-            message: '',
+            message: 'The last section of a high-quality README file is the license. This lets other developers know what they can an cannot do with your project.',
             name: 'License'
         },
         {
@@ -56,6 +56,11 @@ inquirer
             name: 'Tests'
         },
     ])
+    .then((respone)=>{
+
+        fs.writeFile('index.html', `
+        `)
+    })
 
 // TODO: Create an array of questions for user input
 const questions = [];
