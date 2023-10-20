@@ -90,7 +90,23 @@ ${response['How to Contribute']}
 ## Test
 ${response.Tests}
 `;
+const license = [
+    {
+        name: 'MIT License',
+        badge: "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
 
+    },
+    {
+        name: 'Mozilla Public License',
+        badge: "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)"
+
+    },
+    {
+        name: 'GNU AGPL v3',
+        badge: "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)"
+
+    }
+],
         fs.writeFile('newREADME.md', markdown, (err) => {
             if (err) {
                 console.error(err);
