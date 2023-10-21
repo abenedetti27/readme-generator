@@ -106,7 +106,7 @@ ${response.License}
 ${response.Features}
 
 ## Contributing <a name="contributing"></a>
-${response['How to Contribute']}
+${response.Contributing}
 
 ## Tests <a name="tests"></a>
 ${response.Tests}
@@ -121,7 +121,7 @@ Email: ${response.Email}
 `;
 
 
-        fs.writeFile('newREADME.md', markdown, (err) => {
+        fs.writeFile('sampleREADME.md', markdown, (err) => {
             if (err) {
                 console.error(err);
             } else {
