@@ -1,36 +1,33 @@
 
-# really good repo
-undefined
+# fantastic repo
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 # Description 
-this repo is really good
+this repo is fantastic
 
 ## Table of Countents 
-this is not a long repo
+this isnt very long
 
 ## Installation
-step 1, step 2
+lots and lots of steps
 
 ## Usage
-download and use
+this is easy to use however you wish
 
 ## Credits
-i did it alone
+i am a lone wolf
 
 ## License
-Mozilla Publlic License
-
-## Badges
-
+GNU AGPL v3
 
 ## Features
-
+none
 
 ## How to Contribute
-
+none
 
 ## Test
-
+none
 
 ## Questions
-
+fantastic@fantastic.com
