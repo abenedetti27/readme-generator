@@ -9,6 +9,11 @@ function init() {
         .prompt([
             {
                 type: 'input',
+                message: 'What is the title of your project',
+                name: 'Title'
+            },       
+            {
+                type: 'input',
                 message: 'Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide: -What was your motivation? -Why did you build this project? -What problems does it solve? -What did you learn?',
                 name: 'Description'
             },
@@ -33,9 +38,10 @@ function init() {
                 name: 'Credits'
             },
             {
-                type: 'input',
+                type: 'list',
                 message: 'The last section of a high-quality README file is the license. This lets other developers know what they can an cannot do with your project.',
-                name: 'License'
+                name: 'License',
+                choices: ['MIT License', 'Mozilla Publlic License', 'GNU AGPL v3']
             },
             {
                 type: 'input',
@@ -44,22 +50,38 @@ function init() {
             },
             {
                 type: 'input',
-                question: '',
+                message: '',
                 name: 'Features'
             },
             {
                 type: 'input',
-                question: '',
+                message: '',
                 name: 'How to Contribute'
             },
             {
                 type: 'input',
-                question: '',
+                message: '',
                 name: 'Tests'
+            },
+            {
+                type: 'input',
+                message: 'Provide links to where you can be reached with questions.',
+                name: 'Questions'
             },
         ])
         .then((response)=> {
-const markdown = `
+            const LicenseBadge = {
+                'MIT License': "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)",
+            
+                'Mozilla Public License': "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)",
+                
+                'GNU AGPL v3': "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)"
+            };
+
+            const markdown = `
+# ${response.Title}
+${LicenseBadge[response.License]}
+
 # Description 
 ${response.Description}
 
@@ -89,24 +111,12 @@ ${response['How to Contribute']}
 
 ## Test
 ${response.Tests}
+
+## Questions
+${response.Questions}
 `;
-const license = [
-    {
-        name: 'MIT License',
-        badge: "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
 
-    },
-    {
-        name: 'Mozilla Public License',
-        badge: "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)"
 
-    },
-    {
-        name: 'GNU AGPL v3',
-        badge: "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)"
-
-    }
-],
         fs.writeFile('newREADME.md', markdown, (err) => {
             if (err) {
                 console.error(err);

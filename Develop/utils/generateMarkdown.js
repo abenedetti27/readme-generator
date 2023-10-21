@@ -19,6 +19,8 @@ function renderLicenseSection(license) {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
+  const selectedLicense = data.license;
+  const selectedLicenseBadge = license.find(license => license.name === selectedLicense).badge;
   //plug in data to template literals
   //data is the layout of what the ultimate readme file will generate
   // hint- call renderLicense function inside this function
