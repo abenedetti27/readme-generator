@@ -1,9 +1,9 @@
 
-# yes
+# Great Project
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 # Description <a name="description"></a>
-yes
+this project is really great
 
 ## Table of Countents 
 - [Description](#description)
@@ -16,30 +16,30 @@ yes
 - [Questions](#questions)
 
 ## Installation <a name="installation"></a>
-yes
+step by step
 
 ## Usage <a name="usage"></a>
-yes
+use it and love it
 
 ## Credits <a name="credits"></a>
-yes
+lone wolf
 
 ## License <a name="license"></a>
 MIT License
 
-## Features <a name="description"></a>
-yes
+## Features <a name="features"></a>
+so many features
 
 ## Contributing <a name="contributing"></a>
 undefined
 
 ## Tests <a name="tests"></a>
-yes
+all the tests
 
 ## Questions <a name="questions"></a>
 
 Please direct any questions to the following:
 
-GitHub Profile: [yes](https://github.com/yes)
+GitHub Profile: [github](https://github.com/github)
 
-Email: yes
+Email: email

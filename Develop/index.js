@@ -14,7 +14,7 @@ function init() {
             },       
             {
                 type: 'input',
-                message: 'Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide: -What was your motivation? -Why did you build this project? -What problems does it solve? -What did you learn?',
+                message: 'Provide a short description explaining the what, why, and how of your project. What was your motivation? Why did you build this project? What problems does it solve? What did you learn?',
                 name: 'Description'
             },
             {
@@ -34,23 +34,23 @@ function init() {
             },
             {
                 type: 'list',
-                message: 'The last section of a high-quality README file is the license. This lets other developers know what they can an cannot do with your project.',
+                message: 'Select a license so other developers know what they can an cannot do with your project.',
                 name: 'License',
                 choices: ['MIT License', 'Mozilla Public License', 'GNU AGPL v3']
             },
             {
                 type: 'input',
-                message: '',
+                message: 'List features of your project',
                 name: 'Features'
             },
             {
                 type: 'input',
-                message: '',
+                message: 'If you would like others to contribute, include guidelines for how to do so.',
                 name: 'Contributing'
             },
             {
                 type: 'input',
-                message: '',
+                message: 'If you have written tests for your application, include them here with examples of how to run them.',
                 name: 'Tests'
             },
             {
@@ -77,7 +77,7 @@ function init() {
 # ${response.Title}
 ${LicenseBadge[response.License]}
 
-# Description <a name="description"></a>
+## Description <a name="description"></a>
 ${response.Description}
 
 ## Table of Countents 
@@ -113,9 +113,9 @@ ${response.Tests}
 
 ## Questions <a name="questions"></a>
 
-Please direct any questions to the following:
-
 GitHub Profile: [${response.GitHub}](https://github.com/${response.GitHub})
+
+Please direct any questions to:
 
 Email: ${response.Email}
 `;
