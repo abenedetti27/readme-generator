@@ -1,33 +1,45 @@
 
-# fantastic repo
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+# yes
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-# Description 
-this repo is fantastic
+# Description <a name="description"></a>
+yes
 
 ## Table of Countents 
-this isnt very long
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Credits](#credits)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
 
-## Installation
-lots and lots of steps
+## Installation <a name="installation"></a>
+yes
 
-## Usage
-this is easy to use however you wish
+## Usage <a name="usage"></a>
+yes
 
-## Credits
-i am a lone wolf
+## Credits <a name="credits"></a>
+yes
 
-## License
-GNU AGPL v3
+## License <a name="license"></a>
+MIT License
 
-## Features
-none
+## Features <a name="description"></a>
+yes
 
-## How to Contribute
-none
+## Contributing <a name="contributing"></a>
+undefined
 
-## Test
-none
+## Tests <a name="tests"></a>
+yes
 
-## Questions
-fantastic@fantastic.com
+## Questions <a name="questions"></a>
+
+Please direct any questions to the following:
+
+GitHub Profile: [yes](https://github.com/yes)
+
+Email: yes

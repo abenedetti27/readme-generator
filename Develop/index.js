@@ -19,11 +19,6 @@ function init() {
             },
             {
                 type: 'input',
-                message: 'If your README is long, add a table of contents to make it as easy for users to find what they need.',
-                name: 'Table of Contents (Optional)'
-            },
-            {
-                type: 'input',
                 message: 'What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.',
                 name: 'Installation'
             },
@@ -41,12 +36,7 @@ function init() {
                 type: 'list',
                 message: 'The last section of a high-quality README file is the license. This lets other developers know what they can an cannot do with your project.',
                 name: 'License',
-                choices: ['MIT License', 'Mozilla Publlic License', 'GNU AGPL v3']
-            },
-            {
-                type: 'input',
-                message: '',
-                name: 'Badges'
+                choices: ['MIT License', 'Mozilla Public License', 'GNU AGPL v3']
             },
             {
                 type: 'input',
@@ -56,7 +46,7 @@ function init() {
             {
                 type: 'input',
                 message: '',
-                name: 'How to Contribute'
+                name: 'Contributing'
             },
             {
                 type: 'input',
@@ -65,8 +55,13 @@ function init() {
             },
             {
                 type: 'input',
-                message: 'Provide links to where you can be reached with questions.',
-                name: 'Questions'
+                message: 'What is your GitHub user name?',
+                name: 'GitHub'
+            },
+            {
+                type: 'input',
+                message: 'What is your email?',
+                name: 'Email'
             },
         ])
         .then((response)=> {
@@ -82,35 +77,47 @@ function init() {
 # ${response.Title}
 ${LicenseBadge[response.License]}
 
-# Description 
+# Description <a name="description"></a>
 ${response.Description}
 
 ## Table of Countents 
-${response['Table of Contents (Optional)']}
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Credits](#credits)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
 
-## Installation
+## Installation <a name="installation"></a>
 ${response.Installation}
 
-## Usage
+## Usage <a name="usage"></a>
 ${response.Usage}
 
-## Credits
+## Credits <a name="credits"></a>
 ${response.Credits}
 
-## License
+## License <a name="license"></a>
 ${response.License}
 
-## Features
+## Features <a name="features"></a>
 ${response.Features}
 
-## How to Contribute
+## Contributing <a name="contributing"></a>
 ${response['How to Contribute']}
 
-## Test
+## Tests <a name="tests"></a>
 ${response.Tests}
 
-## Questions
-${response.Questions}
+## Questions <a name="questions"></a>
+
+Please direct any questions to the following:
+
+GitHub Profile: [${response.GitHub}](https://github.com/${response.GitHub})
+
+Email: ${response.Email}
 `;
 
 
