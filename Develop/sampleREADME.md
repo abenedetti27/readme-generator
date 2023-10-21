@@ -1,9 +1,9 @@
 
-# Great Project
+# Really Great Project
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description <a name="description"></a>
-This project is super great. I built it because I knew it would be great!
+This project is super great.
 
 ## Table of Countents 
 - [Description](#description)
@@ -16,25 +16,25 @@ This project is super great. I built it because I knew it would be great!
 - [Questions](#questions)
 
 ## Installation <a name="installation"></a>
-Step by step, it's so great.
+step by step
 
 ## Usage <a name="usage"></a>
-Use it and love it.
+use it and love it
 
 ## Credits <a name="credits"></a>
-lone wolf.
+i worked all by my lonesome
 
 ## License <a name="license"></a>
 MIT License
 
 ## Features <a name="features"></a>
-so many great features.
+too many features to list
 
 ## Contributing <a name="contributing"></a>
-undefined
+please contribute, i need help.
 
 ## Tests <a name="tests"></a>
-so mamy great tests.
+lots of great tests
 
 ## Questions <a name="questions"></a>
 
